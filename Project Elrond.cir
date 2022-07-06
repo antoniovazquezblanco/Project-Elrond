@@ -1,0 +1,14 @@
+.title KiCad schematic
+R102 /vout GND 900k
+R101 VCC /vout 900k
+C101 /ant+ /vout 1u
+V302 /ant+ GND dc 0 ac 1 sin(0 20nV 7.8)
+V301 VCC GND dc 12
+.noise v(vout) v302 dec 100 1mHz 50GHz
+.control
+run
+rusage
+plot noise1.inoise_spectrum noise1.onoise_spectrum
+print noise2.inoise_total noise2.onoise_total
+.endcontrol
+.end
