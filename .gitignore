@@ -1,3 +1,4 @@
 # KiCad
 *-backups
 *.kicad_prl
+*.cir
